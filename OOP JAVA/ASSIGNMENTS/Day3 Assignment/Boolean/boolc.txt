@@ -1,0 +1,12 @@
+public class boolc
+{
+	
+	public static void main(String[]args)
+	{
+		String status="0";
+		boolean adi=String.toBoolean(status);
+		System.out.println(adi);
+	}
+		
+	
+}
