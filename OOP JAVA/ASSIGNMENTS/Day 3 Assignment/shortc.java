@@ -1,4 +1,4 @@
-public class byteb
+public class shortc
 {
 	
 	public static void main(String[]args)
