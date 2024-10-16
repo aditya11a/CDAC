@@ -1,0 +1,13 @@
+1.Write a query that will give you all orders for more than Rs. 1,000.
+->select * from orders
+  where amt > 1000;
+
+2.Write a query that will give you the names and cities of all salespeople in 
+  London with a commission above .10.
+->select * from salespeople
+  where (city = 'London' && comm >= 0.10);
+
+3.Write a query on the Customers table whose output will exclude all customers 
+  with a rating <= 100, unless they are located in Rome.
+->select * from customers
+  where (NOT(rating<=100) OR city='Rome');
