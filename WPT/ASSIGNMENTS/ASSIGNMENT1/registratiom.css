@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+}
+
+input{
+    text-align: right;
+}
+h2{
+    text-decoration: underline;
+}
+
+#aa{
+    text-align: right;
+}
+.maincontainer{
+    width: 100%;
+    overflow: auto;
+}
+.maincontainer div{
+    width:50%;
+    float:left;
+}
+.cont1 input{
+    justify-items: right;
+    
+   
+
+}
+.cont1 span{
+    padding: 10px;
+}
+.cont2 span{
+    padding: 10px;
+}
+

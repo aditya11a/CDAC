@@ -1,0 +1,30 @@
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content {
+    display: flex;
+}
+.sidebar {
+    flex: 1;
+    background: #fff3e0;
+    padding: 20px;
+}
+.header{
+    text-align: center;
+    background: #f57c00;
+    color: white;
+    padding: 10px 0;
+}
+
+
+section h3 {
+    border-bottom: 2px solid #f57c00;
+    padding-bottom: 5px;
+}
+img{
+   align-self: center; 
+}
