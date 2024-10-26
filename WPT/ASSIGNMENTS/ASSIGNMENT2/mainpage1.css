@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+     backdrop-filter: blur(4px);
+    border:1px solid black;
+}
+.menu_bar {
+    background-color: #f96d00;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.menu_bar ul {
+    list-style: none;
+    display: flex;
+}
+.menu_bar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+.menu_bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+.menu_bar ul li a:hover {
+    color: #222831;
+}
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #f96d00;
+}
+.menu_bar ul li:hover .dropdown_menu {
+    display: block;
+}
+.dropdown_menu ul {
+    display: block;
+    margin: 10px;
+}
+.dropdown_menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+.CON {
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(MAINBACK1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.CON .content {
+    margin-bottom: 20px;
+}
+.CON p {
+    margin-top: 20;
+    margin-left: 100px;
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 20px;
+}

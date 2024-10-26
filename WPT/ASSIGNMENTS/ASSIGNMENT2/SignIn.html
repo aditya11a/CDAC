@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SIGN IN PAGE</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+         
+      #container{
+         font-family: sans-serif;
+         width: 400px;
+         height: 400px;
+         text-align: center;
+         margin: 80px auto;
+         backdrop-filter: blur(4px);
+         border:1px solid black;
+         margin-bottom: 160px;
+         border-radius: 25px;
+         margin-top: 20PX;
+      }
+      body{
+   
+         display: flex;
+         flex-direction: column;
+         min-height: 100vh;
+         background-image: url(BACKGROUND3.jpg);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+      }
+
+      #heading{
+         padding-top: 20px;
+      }
+      input{
+         width: 70%;
+         margin-bottom: 25px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+      }
+      button{
+         width: 35%;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         background: white;
+         color: #EF5350;
+         border-color:#EF5350;
+         border-width: 1px;
+         border-style: solid;
+         cursor: pointer;
+         transition: background 0.4s;
+      }
+      button:hover{
+         background: #EF5350;
+         color: white;
+      }
+      a{
+        margin-top: auto;
+        text-decoration: none; 
+      }
+      .menu_bar 
+      {
+          background-color: #f96d00;
+         height: 80px;
+          width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 5%;
+   }
+      .menu_bar ul {
+       list-style: none;
+       display: flex;
+   }
+      .menu_bar ul li {
+       padding: 10px 30px;
+       position: relative;
+   }
+       .menu_bar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      transition: all 0.3s;
+   }
+   .menu_bar ul li a:hover {
+    color: #222831;
+   }
+
+     
+      
+   </style>
+</head>
+<body>
+   <div class="menu_bar">
+      <h1 class="logo"><img src="logoo-Logo.webp" alt="Logo" style="height: 75px;"></h1>
+      <ul>
+          <li><a href="mainpage1.html">HOME</a></li>
+      </ul>
+  </div>
+   <div id="container">
+      <h2 id="heading">Sign In</h2>
+      <form>
+         <input type="text" placeholder="Enter Username">
+         <input type="password" placeholder="Enter Password">
+         <button type="submit">Login</button>
+      </form>
+    <div>
+        <p>Don't have an account? </p>
+        <button><a href="signup.html" style="text-decoration: none;">Sign up now</a></button>
+   </div>
+      
+   </div>
+  
+</body>
+</html>
