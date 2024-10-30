@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment3</title>
+    <style>
+      .container {
+        padding: 30px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 600px;
+      }
+
+      input#submit_btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #000;
+        font-weight: 600;
+        margin-top: 20px;
+        background: bisque;
+        cursor: pointer;
+        width: 30%;
+        border-radius: 50px;
+      }
+
+      #form_submit {
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #000;
+        font-weight: 600;
+        margin-top: 20px;
+        background: bisque;
+        cursor: pointer;
+        width: 30%;
+        border-radius: 50px;
+      }
+
+      .task2 {
+        margin: 30px 0px;
+      }
+
+      /* form.contct_form {
+    display: flex;
+    flex-direction: column;
+    
+} */
+      .task2 input {
+        padding: 10px;
+        width: 100%;
+        margin: 10px 0pc;
+      }
+
+      .task3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+
+      select#selcolor {
+        padding: 10px 20px 10px 5px;
+        margin-right: 10px;
+      }
+
+      input#remsub {
+        padding: 10px;
+        background: 
+        bisque;
+      }
+      .highlight {
+            color: green; 
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="task1">
+        <p id="para">Mumbai is the capital city of Maharashtra located on the west coast of the Indian peninsula. Named after Goddess Mumba Devi, Mumbai is a diverse city that offers a variety of choices to spend some quality time with your loved ones. From beaches to theme parks, from historical sites to religious spots, from shopping centres to wide array of eateries, Mumbai offers something for everyone. Mumbai Tourism is ideal for all kinds of holiday, be it a long break or a weekend getaway or a one day trip to the happening city.</p>
+        <input type="submit" class="smt_btn" id="submit_btn" onclick="changeFont();">
+      </div>
+      <div class="task2">
+        <form class="contct_form" method="get"> First Name <input type="text" id="fname" placeholder="Enter First Name"> Last Name <input type="text" id="lname" placeholder="Enter Last Name"> Mobile No <input type="number" id="cno" placeholder="Enter Mobile number"> Email <input type="email" id="email" placeholder="Enter Mail-Id">
+          <input type="submit" name="submit" id="form_submit" onclick="getValue(); return false;">
+        </form>
+        <div id="show_values"></div>
+      </div>
+      <div class="task3">
+        <select class="color" id="selcolor" value="select color">
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="greeen">Green</option>
+          <option value="pink">Pink</option>
+          <option value="gray">Gray</option>
+        </select>
+        <input type="submit" id="remsub" onclick='removeElement()' value="Remove">
+      </div>
+      <div class="task4">
+        <div><a href="#"><p id="hoverPara">On mouse over here bold words of the following 
+            paragraph will be highlighted
+        </p></a></div>
+        <p><span class="hd">we</span> have just started <span class="hd">this</span> section for the users(<span class="hd">beginner</span>
+             to intermidiate)
+            who <span class="hd">want</span>  to work with <span class="hd">various</span> javascript <span class="hd"></span>problem
+        and write script online to <span class="hd">test </span>their javascript <span class="hd">skill.</span> </p>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="app.js"></script> -->
+  <script>
+    function changeFont() {
+      document.getElementById("para").style.color = "orange";
+      document.getElementById("para").style.font = "calibri";
+      document.getElementById("para").style.fontSize = "30px";
+    }
+    //task 2
+    function getValue() {
+      let fname = document.getElementById("fname").value;
+      let lname = document.getElementById("lname").value;
+      let contact_no = document.getElementById("cno").value;
+      let email = document.getElementById("email").value;
+      let x = document.getElementById("show_values");
+      x.innerHTML = `
+											<h3>Form Details</h3>First name:
+   ${fname} 
+										</br>
+									</br>Last name:
+   ${lname} 
+								</br>
+							</br>Contact number:
+   ${contact_no}
+						</br>
+					</br>Email:
+   ${email}`;
+    }
+    //task3
+    function removeElement() {
+      var select = document.getElementById('selcolor');
+      const drop = [select.selectedIndex];
+      if (drop != -1) {
+        select.remove(drop);
+      } else {
+        alert("select the item for remove");
+      }
+    }
+
+    //task4
+
+    const link = document.getElementById("hoverPara");
+const words = document.getElementsByClassName("hd");
+
+link.addEventListener("mouseover", function () {
+    Array.from(words).forEach(word => {
+        word.classList.add("highlight");
+    });
+});
+
+link.addEventListener("mouseout", function () {
+    Array.from(words).forEach(word => {
+        word.classList.remove("highlight");
+    });
+});
+
+  </script>
+</html>
