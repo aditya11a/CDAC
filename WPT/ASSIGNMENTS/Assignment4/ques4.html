@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(site,callBackFunc){
+            setTimeout(()=>{
+                try {
+                    if(!site){
+                    throw new Error('Site not provided');
+                    }
+                    callBackFunc();
+                }
+                 catch (error) {
+                    callBackFunc(error.message,null);
+                }
+            },5000);
+        }
+
+        function callBackFunc(error,response){
+            if(error){
+                console.log(error);
+            }
+            else{
+                console.log("response");
+            }
+        }
+        fetchData('www.example.com',callBackFunc);
+
+        fetchData('',callBackFunc);
+    </script>
+</body>
+</html>
